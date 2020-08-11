@@ -9,7 +9,7 @@ const initDependencies = async () => {
 
 const config = {
   app: {
-    port : process.env.APP_PORT,
+    port : parseInt(process.env.APP_PORT ?? "3000"),
   },
   facebook: {
     api_version : process.env.API_VERSION,

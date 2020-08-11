@@ -7,8 +7,7 @@ dotenv.config();
 const logger = winston.createLogger({
   level: 'debug',
   format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.json(),
+    winston.format.cli(),
   ),
   transports: [
     new winston.transports.Console({ handleExceptions: true }),
