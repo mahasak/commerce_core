@@ -6,7 +6,7 @@ export const notFoundError = () => {
   throw new HTTP404Error('Method not found.');
 };
 
-export const clientError = (err: HTTPClientError, res: Response, next: NextFunction) => {
+export const clientError = (err: Error | HTTPClientError, res: Response, next: NextFunction) => {
   if (err instanceof HTTPClientError) {
     let { message, statusCode } = err;
     logger.warn({
